@@ -1,0 +1,29 @@
+{
+    "name": "tokokilat/products",
+    "description": "module product tokokilat",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tokokilat",
+            "email": "developer@tokokilat.com"
+        }
+    ],
+      "require": {
+          "laravel/framework": "6.*",
+          "haydenpierce/class-finder": "^0.4.0"
+      },
+      "autoload": {
+          "psr-4": {
+              "Tokokilat\\ProductModule\\": "./src"
+          }
+      },
+      "extra": {
+          "laravel": {
+              "providers": [
+                  "Tokokilat\\ProductModule\\TokokilatProductServiceProvider"
+              ]
+          }
+      },
+    "minimum-stability": "dev"
+}
