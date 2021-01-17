@@ -1,12 +1,12 @@
 {
-    "name": "tokokilat/products",
-    "description": "module product tokokilat",
+    "name": "lapakilat/products",
+    "description": "module product lapakilat",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "tokokilat",
-            "email": "developer@tokokilat.com"
+            "name": "lapakilat",
+            "email": "developer@lapakilat.com"
         }
     ],
       "require": {
@@ -15,13 +15,13 @@
       },
       "autoload": {
           "psr-4": {
-              "Tokokilat\\ProductModule\\": "./src"
+              "Lapakilat\\ProductModule\\": "./src"
           }
       },
       "extra": {
           "laravel": {
               "providers": [
-                  "Tokokilat\\ProductModule\\TokokilatProductServiceProvider"
+                  "Lapakilat\\ProductModule\\LapakilatProductServiceProvider"
               ]
           }
       },
