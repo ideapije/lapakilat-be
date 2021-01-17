@@ -1,6 +1,6 @@
 <?php
 
-namespace Tokokilat\ProductModule\Http\Controllers\API;
+namespace Lapakilat\ProductModule\Http\Controllers\API;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;

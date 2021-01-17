@@ -1,6 +1,6 @@
 <?php
 
-namespace Tokokilat\ProductModule;
+namespace Lapakilat\ProductModule;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Debug\ExceptionHandler;
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factory;
 /**
  * 
  */
-class TokokilatProductServiceProvider extends ServiceProvider
+class LapakilatProductServiceProvider extends ServiceProvider
 {
 	
 	/**
@@ -35,20 +35,20 @@ class TokokilatProductServiceProvider extends ServiceProvider
 
     public function loadConfig()
     {
-        $path = __DIR__ . '/../config/tk-product.php';
-        $this->mergeConfigFrom($path, 'tk-product');
+        $path = __DIR__ . '/../config/lk-product.php';
+        $this->mergeConfigFrom($path, 'lk-product');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                $path => config_path('tk-product.php'),
-            ], 'tk-product:config');
+                $path => config_path('lk-product.php'),
+            ], 'lk-product:config');
         }
     }
 
     public function loadRoutes(Router $router)
     {
-        $router->prefix('api/'.config('tk-product.api.prefix', 'products'))
-        ->namespace('Tokokilat\ProductModule\Http\Controllers\API')
+        $router->prefix('api/'.config('lk-product.api.prefix', 'products'))
+        ->namespace('Lapakilat\ProductModule\Http\Controllers\API')
         ->middleware(['api'])
         ->group(function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
@@ -67,6 +67,6 @@ class TokokilatProductServiceProvider extends ServiceProvider
     private function loadViews()
     {
         $path = __DIR__.'/../resources/views';
-        $this->loadViewsFrom($path, 'tk-product');
+        $this->loadViewsFrom($path, 'lk-product');
     }
 }

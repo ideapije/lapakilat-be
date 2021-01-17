@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f97d40fa6d7d252225ec3a01eb340e9",
+    "content-hash": "b8be342ae5bc6d9d7f7c869a54d1897f",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -452,6 +452,45 @@
                 "issues": "https://gitlab.com/api/v4/projects/7670051/issues"
             },
             "time": "2021-01-05T20:50:49+00:00"
+        },
+        {
+            "name": "lapakilat/products",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/products",
+                "reference": "e737801aacd03e0a44ea658962b14a5012268670"
+            },
+            "require": {
+                "haydenpierce/class-finder": "^0.4.0",
+                "laravel/framework": "6.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lapakilat\\ProductModule\\LapakilatProductServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lapakilat\\ProductModule\\": "./src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lapakilat",
+                    "email": "developer@lapakilat.com"
+                }
+            ],
+            "description": "module product lapakilat",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laravel/framework",
@@ -3850,45 +3889,6 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
-            "name": "tokokilat/products",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "modules/products",
-                "reference": "e7fafcda687984df9cf87840f6b72a4d618ed024"
-            },
-            "require": {
-                "haydenpierce/class-finder": "^0.4.0",
-                "laravel/framework": "6.*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Tokokilat\\ProductModule\\TokokilatProductServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tokokilat\\ProductModule\\": "./src"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "tokokilat",
-                    "email": "developer@tokokilat.com"
-                }
-            ],
-            "description": "module product tokokilat",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v3.6.7",
             "source": {
@@ -5362,16 +5362,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.0",
+            "version": "9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8e16c225d57c3d6808014df6b1dd7598d0a5bbbe"
+                "reference": "e7bdf4085de85a825f4424eae52c99a1cec2f360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8e16c225d57c3d6808014df6b1dd7598d0a5bbbe",
-                "reference": "8e16c225d57c3d6808014df6b1dd7598d0a5bbbe",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e7bdf4085de85a825f4424eae52c99a1cec2f360",
+                "reference": "e7bdf4085de85a825f4424eae52c99a1cec2f360",
                 "shasum": ""
             },
             "require": {
@@ -5449,7 +5449,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.0"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.1"
             },
             "funding": [
                 {
@@ -5461,7 +5461,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-04T05:05:53+00:00"
+            "time": "2021-01-17T07:42:25+00:00"
         },
         {
             "name": "scrivo/highlight.php",
@@ -6610,7 +6610,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "tokokilat/products": 20
+        "lapakilat/products": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
