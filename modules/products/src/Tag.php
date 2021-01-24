@@ -9,7 +9,7 @@ class Tag extends Model
     /**
      * @var array
      */
-    protected $fillable = ['tag', 'image', 'as_category'];
+    protected $fillable = ['name', 'image', 'as_category'];
     protected $hidden = ['created_at', 'updated_at'];
 
     public function items()
