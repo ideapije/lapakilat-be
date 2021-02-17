@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ImageProduct extends Model
 {
+    public $fillable = [
+        'image'
+    ];
+    
     //
     public function product()
     {

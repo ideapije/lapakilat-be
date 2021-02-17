@@ -3,6 +3,7 @@
 namespace Lapakilat\ProductModule\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class ProductResource extends JsonResource
 {
@@ -18,8 +19,10 @@ class ProductResource extends JsonResource
             'id' => $this->id,
             'slug' => $this->slug,
             'name' => $this->name,
-            'image' => $this->image,
-            'images' => $this->imageProducts()->pluck('image')->toArray(),
+            'image' => Storage::disk('products')->url($this->image),
+            'images' => $this->imageProducts()->pluck('image')->map(function ($item, $key){
+                return Storage::disk('products')->url($item);
+            }),
             'price' => $this->price,
             'sale_price' => $this->sale_price,
             'discount' => (boolean) $this->discount,
