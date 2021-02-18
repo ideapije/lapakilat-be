@@ -1,5 +1,7 @@
 <?php
 
+namespace Lapakilat\ProductModule\Database\Seeds;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
